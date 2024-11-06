@@ -1,0 +1,51 @@
+# Ignore diretórios de compilação do Maven
+target/
+
+# Ignorar dependências locais baixadas pelo Maven
+.mvn/
+**/logs/
+!**/src/main/resources/**/logs/
+
+# Arquivos de configuração e logs locais do Maven
+**/dependency-reduced-pom.xml
+**/release.properties
+**/buildNumber.properties
+**/.factorypath
+
+# Diretórios e arquivos do Visual Studio Code
+.vscode/
+.history/
+.idea/
+*.swp
+
+# Configurações de IDEs comuns
+.classpath
+.project
+.settings/
+*.launch
+*.iml
+
+# Arquivos de log e temporários
+*.log
+*.tmp
+*.out
+*.bak
+*.orig
+
+# Arquivos e diretórios do sistema operacional
+.DS_Store
+Thumbs.db
+*.swp
+
+# Arquivos de saída e temporários do Java
+*.class
+*.jar
+*.war
+*.ear
+
+# Arquivos de debug e relatórios de erro
+hs_err_pid*
+replay_pid*
+
+# Configurações de build específicas da máquina
+!.mvn/wrapper/maven-wrapper.jar
