@@ -1,4 +1,4 @@
-package com.lucas_miranda.beecrowd.B1002;
+package com.lucas_miranda.beecrowd.B1001;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -9,13 +9,13 @@ import java.io.PrintStream;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-public class B1002Test {
+public class B1001FunctionalTest {
 
     @Test
-    @DisplayName("Test 1 - Assert the Radius is equals 12.5664")
-    public void shouldPrintRadiusEquals12(){
-
-        String input = "2.00\n";
+    @DisplayName("Should print 'X = 19' when input is 9 and 10")
+    public void shouldPrintX19WhenInputIs10And9() {
+        
+        String input = "10\n9\n";
         System.setIn(new ByteArrayInputStream(input.getBytes()));
 
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
@@ -25,16 +25,15 @@ public class B1002Test {
 
         System.setOut(System.out);
 
-        String expected = "A=12.5664\n";
-
-        assertEquals(expected, outputStream.toString().replaceAll("\\r\\n|\\r|\\n", "\n"));
+        String expectedOutput = "X = 19\n";
+        assertEquals(expectedOutput, outputStream.toString().replaceAll("\\r\\n|\\r|\\n", "\n"));
     }
 
     @Test
-    @DisplayName("Test 2 - Assert the Radius is equals 31819.3103")
-    public void shouldPrintRadiusEquals31819(){
+    @DisplayName("Should print 'X = 25' when input is 5 and 20")
+    public void shouldPrintX25WhenInputIs20And5() {
 
-        String input = "100.64\n";
+        String input = "20\n5\n";
         System.setIn(new ByteArrayInputStream(input.getBytes()));
 
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
@@ -44,16 +43,15 @@ public class B1002Test {
 
         System.setOut(System.out);
 
-        String expected = "A=31819.3103\n";
-
-        assertEquals(expected, outputStream.toString().replaceAll("\\r\\n|\\r|\\n", "\n"));
+        String expectedOutput = "X = 25\n";
+        assertEquals(expectedOutput, outputStream.toString().replaceAll("\\r\\n|\\r|\\n", "\n"));
     }
 
     @Test
-    @DisplayName("Test 3 - Assert the Radius is equals 70685.7750")
-    public void shouldPrintRadiusEquals70685(){
+    @DisplayName("Should print 'X = 70' when input is 10 and 60")
+    public void shouldPrintX70WhenInputIs10And60() {
 
-        String input = "150.00\n";
+        String input = "10\n60\n";
         System.setIn(new ByteArrayInputStream(input.getBytes()));
 
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
@@ -63,9 +61,7 @@ public class B1002Test {
 
         System.setOut(System.out);
 
-        String expected = "A=70685.7750\n";
-
-        assertEquals(expected, outputStream.toString().replaceAll("\\r\\n|\\r|\\n", "\n"));
+        String expectedOutput = "X = 70\n";
+        assertEquals(expectedOutput, outputStream.toString().replaceAll("\\r\\n|\\r|\\n", "\n"));
     }
-    
 }

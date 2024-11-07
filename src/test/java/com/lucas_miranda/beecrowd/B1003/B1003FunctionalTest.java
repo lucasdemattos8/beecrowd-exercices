@@ -9,7 +9,7 @@ import java.io.PrintStream;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-public class B1003Test {
+public class B1003FunctionalTest {
 
     @Test
     @DisplayName("Test 1 - Should print 'SOMA = 40'")

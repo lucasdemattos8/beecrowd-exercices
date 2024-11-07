@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
-class B1000Test {
+class B1000FunctionalTest {
 
     @Test
     @DisplayName("Should test if the Output corresponds 'Hello World'")
