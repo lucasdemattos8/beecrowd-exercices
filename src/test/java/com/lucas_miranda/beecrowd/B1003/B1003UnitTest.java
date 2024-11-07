@@ -15,10 +15,10 @@ public class B1003UnitTest {
         cal.setFirstValue(10);
         cal.setSecondValue(15);
 
-        double expecteSum = 25;
-        double actualArea = cal.getSum();
+        double expectedSum = 25;
+        double actualSum = cal.getSum();
 
-        assertEquals(expecteSum, actualArea, 0.0001);
+        assertEquals(expectedSum, actualSum, 0.0001);
     }
 
     @Test
@@ -29,10 +29,24 @@ public class B1003UnitTest {
         cal.setFirstValue(0);
         cal.setSecondValue(0);
 
-        double expectedArea = 0;
-        double actualArea = cal.getSum();
+        double expectedSum = 0;
+        double actualSum = cal.getSum();
 
-        assertEquals(expectedArea, actualArea, 0.0001);
+        assertEquals(expectedSum, actualSum, 0.0001);
+    }
+
+    @Test
+    @DisplayName("Sum of A= -10 and B= -5 should be -15")
+    public void shouldSumTwoNegativeNumbers() {
+        Calculator cal = new Calculator();
+        
+        cal.setFirstValue(-10);
+        cal.setSecondValue(-5);
+
+        double expectedSum = -15;
+        double actualSum = cal.getSum();
+
+        assertEquals(expectedSum, actualSum, 0.0001);
     }
     
 }
