@@ -1,35 +1,67 @@
 package com.lucas_miranda.beecrowd.B1001;
 
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
-class B1001Test {
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+
+public class B1001Test {
 
     @Test
-    @DisplayName("Testar se a saída corresponde ao valor 'Hello World'")
-    public void shouldPrintHelloWorldToConsole() {
-        // Redireciona o System.out para capturar a saída
+    @DisplayName("Should print 'X = 19' when input is 9 and 10")
+    public void shouldPrintX19WhenInputIs10And9() {
+        
+        String input = "10\n9\n";
+        System.setIn(new ByteArrayInputStream(input.getBytes()));
+
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
-        PrintStream printStream = new PrintStream(outputStream);
-        
-        // Redireciona o System.out
-        System.setOut(printStream);
-        
-        // Chama o método main ou o método que gera a saída
+        System.setOut(new PrintStream(outputStream));
+
         Program.main(new String[]{});
-        
-        // Restaura o System.out
+
         System.setOut(System.out);
-        
-        // Verifica a saída (sem considerar espaços em branco ou quebras de linha)
-        assertEquals("Hello, World!\n", outputStream.toString().replaceAll("\\r\\n|\\r|\\n", "\n"));
+
+        String expectedOutput = "X = 19\n";
+        assertEquals(expectedOutput, outputStream.toString().replaceAll("\\r\\n|\\r|\\n", "\n"));
     }
 
+    @Test
+    @DisplayName("Should print 'X = 25' when input is 5 and 20")
+    public void shouldPrintX25WhenInputIs20And5() {
 
-    // outros testes
+        String input = "20\n5\n";
+        System.setIn(new ByteArrayInputStream(input.getBytes()));
+
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(outputStream));
+
+        Program.main(new String[]{});
+
+        System.setOut(System.out);
+
+        String expectedOutput = "X = 25\n";
+        assertEquals(expectedOutput, outputStream.toString().replaceAll("\\r\\n|\\r|\\n", "\n"));
+    }
+
+    @Test
+    @DisplayName("Should print 'X = 70' when input is 10 and 60")
+    public void shouldPrintX70WhenInputIs10And60() {
+
+        String input = "10\n60\n";
+        System.setIn(new ByteArrayInputStream(input.getBytes()));
+
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(outputStream));
+
+        Program.main(new String[]{});
+
+        System.setOut(System.out);
+
+        String expectedOutput = "X = 70\n";
+        assertEquals(expectedOutput, outputStream.toString().replaceAll("\\r\\n|\\r|\\n", "\n"));
+    }
 }
-

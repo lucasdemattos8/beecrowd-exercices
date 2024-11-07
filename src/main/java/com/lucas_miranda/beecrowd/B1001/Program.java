@@ -1,13 +1,19 @@
 package com.lucas_miranda.beecrowd.B1001;
 
+import java.util.Scanner;
+
 public class Program {
     public static void main(String[] args) {
 
-        GreeterService greeter;
+        Scanner sc = new Scanner(System.in);
+        Calculator cal = new Calculator();
 
-        greeter = new GreeterService();
-
-        System.out.println(greeter.getGreeting());
+        cal.setFirstValue(sc.nextInt());
+        cal.setSecondValue(sc.nextInt());
+        
+        sc.close();
+        
+        System.out.println("X = " + cal.getSum());
         
     }
 }

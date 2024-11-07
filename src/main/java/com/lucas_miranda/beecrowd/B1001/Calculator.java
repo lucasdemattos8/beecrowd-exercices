@@ -1,4 +1,4 @@
-package com.lucas_miranda.beecrowd.B1002;
+package com.lucas_miranda.beecrowd.B1001;
 
 public class Calculator {
 
